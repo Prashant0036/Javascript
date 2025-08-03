@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+      
+    </div>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        
+    </div>
+    <script >
+        let cont=document.querySelector(".container")
+        console.log(cont)
+        
+        // Add html just above container
+        cont.insertAdjacentHTML("beforebegin","<h1>I'm just above the container</h1>");
+        
+        
+        // Add html inside container and above of all elements
+        cont.insertAdjacentHTML("afterbegin","<h1>I'm above from all in the container</h1>");
+        
+        // Add html inside container and below of all elements, 
+        cont.insertAdjacentHTML("beforeend","<h1>I'm below from all in the container</h1>");
+       
+    // Add html just below container
+    cont.insertAdjacentHTML("afterend","<h1>I'm just below the container</h1>");
+   
+   
+   </script>
+</body>
+</html>

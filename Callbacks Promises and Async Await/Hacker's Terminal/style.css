@@ -1,0 +1,16 @@
+body{
+    background: rgb(0, 0, 0);
+    color: limegreen;
+    
+}
+@font-face {
+    font-family: SDGlitch_Demo;
+    src: url(SDGlitch_Demo.ttf);
+}
+h3 {
+    font-family: SDGlitch_Demo;
+    font-size: 30px;
+    
+}
+
+

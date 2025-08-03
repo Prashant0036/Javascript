@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document </title>
+</head>
+<body>
+    <script>
+        // 9. The Asynchronous Shopper:
+//    Imagine you are building an online shopping application. 
+//    Write an asynchronous function called placeOrder that simulates placing an order and returns a promise. 
+//    The promise should resolve with an order confirmation message after a random delay.
+
+
+let dateTime = Date().substring(11,15)+Date().substring(16,18);
+let rand=Math.floor(Math.random()*5);
+let arr=["AB","TF","RRS","NFJKN","FJG","KJU"];
+
+
+async function placeOrder(){
+return new Promise((resolve,reject)=>{
+
+   setTimeout(()=>{
+
+
+       resolve("Your order has been placed and your ORDER ID is "+dateTime+arr[rand]);
+   },rand*1000);
+
+
+
+
+})
+
+}
+
+let functionCall=async()=>{
+
+
+   let returnedPromise = await placeOrder();
+   console.log(returnedPromise);
+}
+functionCall();
+    </script>
+</body>
+</html>

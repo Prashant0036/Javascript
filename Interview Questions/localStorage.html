@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage Concept</title>
+  </head>
+  <body>
+    <script>
+         // Set the value of the key "name" to "John Doe"
+        if (localStorage.getItem("name")) {
+          document.write("Welcome "+ localStorage.getItem("name"));
+        }
+       else {
+        let a = prompt("Enter Your Name:");
+        
+        localStorage.setItem("name", a);
+        document.write("Welcome "+ localStorage.getItem("name"));
+
+    }
+
+// store obj
+    let obj = {
+        "name": "Prashant Saraswat",
+        "age": 30,
+        "city": "New York"
+        
+    };
+    // function to convert JavaScript object in a string
+    let str=JSON.stringify(obj);
+    console.log(str);
+
+    // save this string in local storage
+    localStorage.setItem("objStr", str);
+
+// again get this string from Local Storage
+let returnedStr = localStorage.getItem("objStr"); // this is in string format again convert it into JSON object
+let obj2 = JSON.parse(returnedStr);
+console.log(obj2);
+console.log(obj2.name);
+</script>
+  </body>
+</html>

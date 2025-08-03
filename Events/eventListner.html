@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 570px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 500px;
+            width: 70%;
+            border: 1px solid black;
+            
+
+
+        }
+        .boxes{
+            display: flex;
+            gap: 7px;
+
+        }
+        .box{
+            width: 150px;
+            height: 100px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .btns{
+            display: flex;
+            gap: 5px;
+        }
+        #btn3{
+            cursor: pointer;
+        }
+        .lbl{
+            font-size: 20px;
+            background-color: greenyellow;
+            width: 50px;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="boxes">
+        <div class="box" ></div>
+        <div class="box"></div>
+        <div class="box" onclick="alert(' I am an event fired through html tag')"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="btns">     
+        <button id="btn1">Click Me</button>
+        <button id="btn2">Double Click Me</button>
+        <button id="btn3">Hover on Me</button>
+        <button id="btn4">Right Click on Me</button>
+
+    </div>
+
+    <div class="inputs">
+        <input type="text" id="inp1" placeholder="Focus in on me ">
+        <input type="text" id="inp2" placeholder="Focus out on me ">
+        <input type="text" id="inp3" placeholder="Pointer On Me ">
+        <input type="text" id="inp4" placeholder="Pointer Out on Me ">
+        <input type="text" id="inp5" placeholder="Enter Some Text ">
+    </div>
+
+    <div class="labels">
+        You Pressed - <label class="lbl" id="lbl1"></label> <br>
+
+        Code of Key - <label  class="lbl" id="lbl2"></label>
+        <br>
+        You Scrolled - <label class="lbl" id="lbl3"></label>
+        <br>
+        Live Time using - <label class="lbl" id="lbl4"></label>
+    </div>
+    <input type="text" id="inp6" placeholder="Pointer On Me ">
+    <button id="removeEventBtn">Remove this Event</button>
+    <button id="refBtn">Refresh Page</button>
+    </div>
+    <script src="eventListners.js"></script>
+
+</body>
+</html>
